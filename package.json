@@ -1,6 +1,6 @@
 {
   "name": "lesshint-reporter-checkstyle",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Checkstyle reporter for lesshint.",
   "main": "index.js",
   "license": "MIT",
