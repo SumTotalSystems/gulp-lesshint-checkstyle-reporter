@@ -1,0 +1,30 @@
+{
+  "name": "lesshint-reporter-checkstyle",
+  "version": "0.0.1",
+  "description": "Checkstyle reporter for lesshint.",
+  "main": "index.js",
+  "license": "MIT",
+  "author": "Trygve Aaberge <trygveaa@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/trygveaa/lesshint-reporter-checkstyle"
+  },
+  "bugs": {
+    "url": "https://github.com/trygveaa/lesshint-reporter-checkstyle/issues"
+  },
+  "keywords": [
+    "lesshint",
+    "reporter",
+    "checkstyle"
+  ],
+  "scripts": {
+    "lint": "eslint .",
+    "test": "mocha"
+  },
+  "devDependencies": {
+    "chai": "3.5.0",
+    "eslint": "2.7.0",
+    "mocha": "2.4.5",
+    "rewire": "2.5.1"
+  }
+}
