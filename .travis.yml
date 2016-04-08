@@ -1,0 +1,20 @@
+sudo: false
+
+language: node_js
+
+node_js:
+  - "0.10"
+  - "0.12"
+  - "iojs-v1"
+  - "iojs-v2"
+  - "iojs-v3"
+  - "4"
+  - "5"
+
+script: npm test
+
+matrix:
+  include:
+    - node_js: 5
+      env: RUN_LINT=true
+      script: npm --silent run lint
