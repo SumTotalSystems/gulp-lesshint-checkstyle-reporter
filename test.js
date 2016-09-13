@@ -29,7 +29,7 @@ describe('reporter:checkstyle', function () {
 
         expect(report).to.contain('<file name="path/to/file.less">' +
             '<error line="1" column="5" severity="error" ' +
-            'message="Message for someRule." source="someRule" />' +
+            'message="Message for someRule." source="lesshint.linters.someRule" />' +
             '</file>');
     });
 
@@ -61,14 +61,14 @@ describe('reporter:checkstyle', function () {
 
         expect(report).to.contain('<file name="path/to/file.less">' +
             '<error line="1" column="5" severity="error" ' +
-            'message="Message for firstRule." source="firstRule" />' +
+            'message="Message for firstRule." source="lesshint.linters.firstRule" />' +
             '<error line="2" column="6" severity="warning" ' +
-            'message="Message for secondRule." source="secondRule" />' +
+            'message="Message for secondRule." source="lesshint.linters.secondRule" />' +
             '</file>');
 
         expect(report).to.contain('<file name="path/to/another.less">' +
             '<error line="3" column="7" severity="warning" ' +
-            'message="Message for thirdRule." source="thirdRule" />' +
+            'message="Message for thirdRule." source="lesshint.linters.thirdRule" />' +
             '</file>');
     });
 
@@ -86,7 +86,7 @@ describe('reporter:checkstyle', function () {
 
         expect(report).to.contain('<file name="path/to/file&apos;.less">' +
             '<error line="1" column="5" severity="&lt;error&gt;" ' +
-            'message="Message for &quot;someRule&quot;." source="some&amp;Rule" />' +
+            'message="Message for &quot;someRule&quot;." source="lesshint.linters.some&amp;Rule" />' +
             '</file>');
     });
 });
