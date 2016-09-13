@@ -41,7 +41,7 @@ function generateReport (results) {
               error.column,
               xmlEscape(error.severity),
               xmlEscape(error.message),
-              xmlEscape(error.linter)
+              xmlEscape('lesshint.linters.' + error.linter)
             );
         });
 
