@@ -1,20 +1,35 @@
-# lesshint-reporter-checkstyle
+# gulp-lesshint-checkstyle-reporter
 
-[![npm](https://img.shields.io/npm/v/lesshint-reporter-checkstyle.svg)](https://www.npmjs.com/package/lesshint-reporter-checkstyle)
-[![Build Status](https://travis-ci.org/trygveaa/lesshint-reporter-checkstyle.svg?branch=master)](https://travis-ci.org/trygveaa/lesshint-reporter-checkstyle)
-[![Dependency Status](https://david-dm.org/trygveaa/lesshint-reporter-checkstyle.svg?theme=shields.io&style=flat)](https://david-dm.org/trygveaa/lesshint-reporter-checkstyle)
-[![devDependency Status](https://david-dm.org/trygveaa/lesshint-reporter-checkstyle/dev-status.svg?theme=shields.io&style=flat)](https://david-dm.org/trygveaa/lesshint-reporter-checkstyle#info=devDependencies)
-
-Checkstyle reporter for [lesshint](https://github.com/lesshint/lesshint).
+Writes checkstyle output for [lesshint](https://github.com/lesshint/lesshint) to a stream.
 
 ## Installation
 
 ```
-npm install lesshint-reporter-checkstyle
+npm install gulp-lesshint-checkstyle-reporter
 ```
 
-## CLI usage
+## Usage
 
+### Gulp
+
+```javascript
+var gulp = require('gulp');
+var lesshint = require('gulp-lesshint');
+var checkstyleReporter = require('gulp-lesshint-checkstyle-reporter');
+
+gulp.task('lesshint', function() {
+  gulp.src('*.less')
+    .pipe(lesshint())
+    .pipe(checkstyleReporter())
+    .pipe(gulp.dest('target/checkstyle-reports'));
+});
 ```
-lesshint -r lesshint-reporter-checkstyle src/less
-```
+
+#### Options
+
+- *filename* (defaults to *checkstyle.xml*). Default filename of the output xml
+  file.
+
+## Reporter Code
+
+Original reporter code by [trygveaa/lesshint-reporter-checkstyle](https://github.com/trygveaa/lesshint-reporter-checkstyle)

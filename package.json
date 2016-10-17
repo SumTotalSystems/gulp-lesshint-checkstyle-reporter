@@ -1,18 +1,23 @@
 {
-  "name": "lesshint-reporter-checkstyle",
+  "name": "gulp-lesshint-checkstyle-reporter",
   "version": "1.0.0",
-  "description": "Checkstyle reporter for lesshint.",
+  "description": "lesshint checkstyle reporter for gulp.",
   "main": "index.js",
   "license": "MIT",
-  "author": "Trygve Aaberge <trygveaa@gmail.com>",
+  "author": "Michael Gardner <mgardner@sumtotalsystems.com>",
+  "contributors": [
+    "Trygve Aaberge <trygveaa@gmail.com>",
+    "Michael Gardner <mgardner@sumtotalsystems.com>"
+  ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/trygveaa/lesshint-reporter-checkstyle"
+    "url": "https://github.com/sumtotalsystems/gulp-lesshint-checkstyle-reporter"
   },
   "bugs": {
-    "url": "https://github.com/trygveaa/lesshint-reporter-checkstyle/issues"
+    "url": "https://github.com/sumtotalsystems/gulp-lesshint-checkstyle-reporter/issues"
   },
   "keywords": [
+    "gulp",
     "lesshint",
     "reporter",
     "checkstyle"
@@ -25,6 +30,10 @@
     "chai": "3.5.0",
     "eslint": "2.7.0",
     "mocha": "2.4.5",
-    "rewire": "2.5.1"
+    "rewire": "2.5.1",
+    "vinyl": "^2.0.0"
+  },
+  "dependencies": {
+    "through2": "^2.0.1"
   }
 }
