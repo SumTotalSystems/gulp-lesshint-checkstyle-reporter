@@ -76,6 +76,10 @@
           path: opts.filename || 'checkstyle.xml',
           contents: new Buffer(generateReport(results))
         });
+        // dump the less hint results on this file object so any further less hint stuff can use it.
+        checkstyle.lesshint = {
+          results: results
+        };
         this.push(checkstyle);
         this.push(null);
       }
